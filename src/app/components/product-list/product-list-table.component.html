@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table ">
+        <thead>
+            <tr >
+                <th>  </th>
+                
+                <th>name</th>
+                <th>unitPrice</th>
+                    <th>stock</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let tempproduct of products">
+                <td>
+                    <img src="{{tempproduct.imageUrl}}" height="50 " />
+                </td>
+                <td>
+                    {{tempproduct.name}}
+                </td>
+                <td>  {{tempproduct.unitPrice | currency: 'USD'}} </td>
+                <td> {{ tempproduct.unitsInStock}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
